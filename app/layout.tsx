@@ -1,11 +1,32 @@
-import type { Metadata, Viewport } from "next";
-import { Stack_Sans_Headline} from "next/font/google";
-import "./globals.css";
-
+import type { Metadata, Viewport } from 'next';
+import { Stack_Sans_Headline, Inter, DM_Sans, Lato } from 'next/font/google';
+import Header from '@/lib/reusable_components/Header';
+import './globals.css';
 
 const stackSansHeadline = Stack_Sans_Headline({
-  variable: "--font-stack-sans-headline",
-  subsets: ["latin"],
+  variable: '--font-stack-sans-headline',
+  subsets: ['latin'],
+  adjustFontFallback: false,
+  fallback: ['Inter', 'DM Sans', 'Lato', 'sans-serif'],
+});
+
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const dmSans = DM_Sans({
+  variable: '--font-dm-sans',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const lato = Lato({
+  variable: '--font-lato',
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
 });
 
 export const viewport: Viewport = {
@@ -16,20 +37,22 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
-
 export const metadata: Metadata = {
   title: 'Ella James',
   description:
     'I Design Brands, Products and Experiences that are Exceptional and cannot be ignored.',
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang="en"
-      className={`${stackSansHeadline.variable} h-full antialiased`}
+      className={`${stackSansHeadline.variable} ${inter.variable} ${dmSans.variable} ${lato.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full w-full flex flex-col font-stack-sans-headline">
+        <Header />
+        <main className="flex-1">{children}</main>
+      </body>
     </html>
   );
 }

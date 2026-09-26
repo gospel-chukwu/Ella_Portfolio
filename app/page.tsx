@@ -1,7 +1,5 @@
-import Image from "next/image";
+import HomePage from '@/lib/components/HomePage';
 
 export default function Home() {
-  return (
-   <div>Ella James</div>
-  );
+  return <HomePage />;
 }
