@@ -2,7 +2,7 @@
 
 const Projects = () => {
   return (
-    <div className="h-64">Projects</div>
+    <div className="h-64">Projects and Logistics</div>
   );
 };
 
