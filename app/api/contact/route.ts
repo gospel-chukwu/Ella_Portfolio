@@ -21,8 +21,8 @@ export async function POST(req: Request) {
     <td align="center">
       <table width="480" cellpadding="0" cellspacing="0" style="background-color:#ffffff; border-radius:12px; overflow:hidden; font-family:Arial, sans-serif;">
         <tr>
-          <td style="background-color:#111111; padding:24px; text-align:center;">
-            <img src="https://ellajames.vercel.app/logo.png" alt="Ella James" width="120" style="display:block; margin:0 auto;" />
+          <td style="background-color:#F0D1FF; padding:24px; text-align:center;">
+            <img src="https://ellajames.vercel.app/email_logo.png" alt="Ella James" width="120" style="display:block; margin:0 auto;" />
           </td>
         </tr>
         <tr>
