@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Stack_Sans_Headline, Inter, DM_Sans, Lato } from 'next/font/google';
 import './globals.css';
+import { Toaster } from 'react-hot-toast';
 
 const stackSansHeadline = Stack_Sans_Headline({
   variable: '--font-stack-sans-headline',
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
     >
       <body className="min-h-full w-full flex flex-col font-stack-sans-headline">
         {children}
+        <Toaster position="bottom-right" />
       </body>
     </html>
   );
