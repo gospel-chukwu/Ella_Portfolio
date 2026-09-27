@@ -1,18 +1,15 @@
-'use client';
-
-import Footer from '../reusable_components/Footer';
-import ContentToggle from '../sub_components/home/ContentToggle';
+import Footer from '../sub_components/footer/Footer';
+import { getSiteSettings } from '../sanity/sanity_queries';
 import Hero from '../sub_components/home/Hero';
-import Projects from '../sub_components/home/Projects';
-import Snapshots from '../sub_components/home/Snapshots';
+import Showcase from '../sub_components/home/Showcase';
 
-const HomePage = () => {
+const HomePage = async () => {
+  const siteSettings = await getSiteSettings();
+
   return (
     <>
-      <Hero />
-      <ContentToggle />
-      <Snapshots />
-      <Projects />
+      <Hero clients={siteSettings.clients} />
+      <Showcase />
       <Footer />
     </>
   );
