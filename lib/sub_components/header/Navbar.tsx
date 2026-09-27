@@ -21,17 +21,18 @@ const Navbar = () => {
 
   return (
     <nav className="flex gap-14">
-      {NAVIGATIONS.map(navigation => {
+      {NAVIGATIONS.map((navigation, i) => {
         const active = isActive(navigation.link);
 
         return (
           <Link
-            key={navigation.id}
+            key={i}
             href={navigation.link}
             target={navigation.link.includes('spotify') ? '_blank' : '_self'}
-            className={`flex items-center gap-2 text-[0.85rem] leading-[100%] tracking-[1%] font-light text-[#000000] transition-all duration-300 ease-in-out ${
-              active ? 'opacity-100' : 'opacity-50 hover:opacity-80'
-            }`}
+            className={`flex items-center gap-2 text-[0.85rem] leading-[100%] tracking-[1%]
+               font-light text-[#000000] transition-all duration-300 ease-in-out ${
+                 active ? 'opacity-100' : 'opacity-50 hover:opacity-80'
+               }`}
           >
             <span>{navigation.title}</span>
             {navigation.image ? (
