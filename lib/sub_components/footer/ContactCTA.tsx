@@ -13,7 +13,7 @@ const ContactCTA = () => {
           Let's create something extraordinary.
         </p>
       </div>
-      <div className="cursor-pointer flex items-center gap-1 bg-[#F0F0F0] w-fit px-4 py-2 rounded-full">
+      <div className="flex items-center gap-1 bg-[#F0F0F0] w-fit px-4 py-2 rounded-full">
         <div>
           <Image
             src="/icons/inbox.svg"
