@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next';
 import { Stack_Sans_Headline, Inter, DM_Sans, Lato } from 'next/font/google';
-import Header from '@/lib/reusable_components/Header';
 import './globals.css';
 
 const stackSansHeadline = Stack_Sans_Headline({
@@ -50,8 +49,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       className={`${stackSansHeadline.variable} ${inter.variable} ${dmSans.variable} ${lato.variable} h-full antialiased`}
     >
       <body className="min-h-full w-full flex flex-col font-stack-sans-headline">
-        <Header />
-        <main className="flex-1">{children}</main>
+        {children}
       </body>
     </html>
   );
