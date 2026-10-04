@@ -9,6 +9,46 @@ export default defineType({
     defineField({ name: 'slug', type: 'slug', options: { source: 'title' } }),
     defineField({ name: 'thumbnail', type: 'image' }),
     defineField({
+      name: 'thumbnailFit',
+      title: 'Thumbnail Display',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Fill card (cover)', value: 'cover' },
+          { title: 'Centered (contain)', value: 'contain' },
+        ],
+      },
+      initialValue: 'cover',
+    }),
+    defineField({
+      name: 'thumbnailAlignY',
+      title: 'Thumbnail Vertical Position',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Center', value: 'center' },
+          { title: 'Bottom', value: 'bottom' },
+          { title: 'Top', value: 'top' },
+        ],
+      },
+      initialValue: 'center',
+      hidden: ({ document }) => document?.thumbnailFit !== 'contain', // only matters when not full-bleed
+    }),
+    defineField({
+      name: 'thumbnailAlignX',
+      title: 'Thumbnail Horizontal Position',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Center', value: 'center' },
+          { title: 'Left', value: 'left' },
+          { title: 'Right', value: 'right' },
+        ],
+      },
+      initialValue: 'center',
+      hidden: ({ document }) => document?.thumbnailFit !== 'contain',
+    }),
+    defineField({
       name: 'category',
       type: 'array',
       of: [{ type: 'string' }],
