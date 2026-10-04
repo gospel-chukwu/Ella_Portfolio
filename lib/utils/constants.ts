@@ -44,3 +44,11 @@ export const TABS: { id: Tab; label: string }[] = [
   { id: 'projects', label: 'Projects' },
 ];
 
+export const CATEGORIES = [
+  { title: 'Mobile Apps', value: 'mobile-apps' },
+  { title: 'Websites', value: 'websites' },
+  { title: 'Web Apps', value: 'web-apps' },
+  { title: 'Branding', value: 'branding' },
+  { title: 'Dashboards', value: 'dashboards' },
+];
+
