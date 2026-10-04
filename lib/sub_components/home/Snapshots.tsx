@@ -2,7 +2,7 @@
 
 const Snapshots = () => {
   return (
-    <div className="h-164">Snapshots</div>
+    <div className="h-96">Snapshots</div>
   );
 };
 
