@@ -11,3 +11,23 @@ export async function getSiteSettings() {
 
   return client.fetch(query);
 }
+
+
+export async function getProjects() {
+  const query = groq`*[_type == "project"] | order(year desc){
+    _id,
+    title,
+    "slug": slug.current,
+    "thumbnailUrl": thumbnail.asset->url,
+    thumbnailFit,
+    thumbnailAlignY,
+    thumbnailAlignX,
+    category,
+    year,
+    shortDescription,
+    linkType,
+    externalUrl
+  }`;
+
+  return client.fetch(query)
+}
