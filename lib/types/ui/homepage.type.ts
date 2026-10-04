@@ -15,3 +15,9 @@ export type ContentToggleProps = {
   active: string;
   setActive: Dispatch<SetStateAction<Tab>>;
 };
+
+export type ProjectLinkProps = {
+  url: string;
+  linkTarget?: string;
+  text: string;
+};
