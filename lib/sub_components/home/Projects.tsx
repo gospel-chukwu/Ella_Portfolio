@@ -2,7 +2,6 @@
 import ProjectCard from '@/lib/reusable_components/ProjectCard';
 import { Project } from '@/lib/types/sanity/sanity.types';
 import { Container } from '@/lib/wrappers/Container';
-import { Fragment } from 'react/jsx-runtime';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 
@@ -12,10 +11,8 @@ const Projects = ({ projects }: { projects: Project[] }) => {
   return (
     <Container size="default" className="flex flex-col gap-10 py-20 px-10">
       <div className="grid grid-cols-[1fr_1fr] gap-x-10 gap-y-15">
-        {projects.map(project => (
-          <Fragment key={project._id}>
-            <ProjectCard project={project} />
-          </Fragment>
+        {projects.slice(0, 10).map(project => (
+          <ProjectCard key={project._id} project={project} />
         ))}
       </div>
       <div className="flex justify-end">
