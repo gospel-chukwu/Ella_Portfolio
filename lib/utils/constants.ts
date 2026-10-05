@@ -1,4 +1,6 @@
-import { Tab } from "../types/ui/homepage.type";
+import { Tab } from '../types/ui/homepage.type';
+
+export const PAGE_SIZE = 10;
 
 export const NAVIGATIONS = [
   {
@@ -45,10 +47,10 @@ export const TABS: { id: Tab; label: string }[] = [
 ];
 
 export const CATEGORIES = [
+  { title: 'All', value: 'all' },
   { title: 'Mobile Apps', value: 'mobile-apps' },
   { title: 'Websites', value: 'websites' },
   { title: 'Web Apps', value: 'web-apps' },
   { title: 'Branding', value: 'branding' },
   { title: 'Dashboards', value: 'dashboards' },
 ];
-
