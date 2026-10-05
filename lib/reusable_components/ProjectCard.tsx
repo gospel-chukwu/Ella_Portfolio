@@ -32,7 +32,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 alt={project.title || 'Project thumbnail'}
                 width={600}
                 height={600}
-                // most possibly leave max-h-[85%] max-w-[85%] as the max w and h
                 className={`${
                   project.thumbnailAlignY === 'center'
                     ? 'max-h-[80%] max-w-[80%]'
