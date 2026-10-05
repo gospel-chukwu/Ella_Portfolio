@@ -27,7 +27,7 @@ export const SOCIALS = [
   },
   {
     image: '/icons/x.svg',
-    link: 'https://x.com/',
+    link: 'https://x.com/the_ellajames',
   },
   {
     image: '/icons/linkedin.svg',
