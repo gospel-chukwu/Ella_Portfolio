@@ -12,7 +12,7 @@ const ContentToggle = ({active, setActive}: ContentToggleProps) => {
       className="flex items-center justify-center pt-11"
     >
       {/* Track */}
-      <div className="relative flex items-center bg-[#F5F5F5] px-2 py-2 rounded-full overflow-hidden">
+      <div className="relative flex items-center gap-2 bg-[#F5F5F5] px-2 py-2 rounded-full overflow-hidden">
         {/* Sliding pill */}
         <span
           aria-hidden
@@ -28,7 +28,7 @@ const ContentToggle = ({active, setActive}: ContentToggleProps) => {
           <button
             key={tab.id}
             onClick={() => setActive(tab.id)}
-            className={`relative z-10 px-5 py-2 text-sm font-light rounded-full cursor-pointer select-none transition-colors duration-300`}
+            className={`relative z-10  py-2 text-sm font-light rounded-full cursor-pointer select-none transition-colors duration-300`}
             style={{
               // color: active === tab.id ? '#111' : '#888',
               minWidth: '100px',
