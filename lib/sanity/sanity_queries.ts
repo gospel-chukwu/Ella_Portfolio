@@ -32,7 +32,7 @@ export async function getProjects() {
 }
 
 export async function getSnapshots() {
-  const query = groq`*[_type == "snapshot"] | order(order asc){
+  const query = groq`*[_type == "snapshot"] | order(order asc) [0...10]{
     _id,
     title,
     category,

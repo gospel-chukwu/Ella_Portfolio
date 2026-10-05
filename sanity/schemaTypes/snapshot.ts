@@ -47,7 +47,26 @@ export default defineType({
       name: 'order',
       title: 'Display Order',
       type: 'number',
-      description: 'Lower numbers show first.',
+      description: 'Controls position in the homepage grid (1-10). Must be unique — no two snapshots can share a number.',
+      validation: Rule =>
+        Rule.required()
+          .min(1)
+          .max(10)
+          .custom(async (value, context) => {
+            if (value === undefined) return true;
+
+            const { document, getClient } = context;
+            const client = getClient({ apiVersion: '2026-03-01' });
+
+            const duplicates = await client.fetch(
+              `count(*[_type == "snapshot" && order == $value && _id != $id])`,
+              { value, id: document?._id.replace('drafts.', '') },
+            );
+
+            return duplicates === 0
+              ? true
+              : 'This order number is already used by another snapshot.';
+          }),
     }),
   ],
 });
