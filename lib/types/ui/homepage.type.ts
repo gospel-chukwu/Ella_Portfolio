@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
+import { Project } from '../sanity/sanity.types';
 
 export type HeroProps = {
   clients: {
@@ -21,3 +22,17 @@ export type ProjectLinkProps = {
   linkTarget?: string;
   text: string;
 };
+
+export type ProjectsFilterProps = {
+  projects: Project[];
+  active: string;
+  handleFilterChange: (category: string) => void;
+};
+
+export type ProjectsGridProps = {
+  visible: Project[];
+  hasMore: boolean;
+  handleLoadMore: () => void;
+};
+
+export type ProjectsPageProps = { projects: Project[] };
