@@ -34,13 +34,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 height={600}
                 // most possibly leave max-h-[85%] max-w-[85%] as the max w and h
                 className={`${
-                  // project.thumbnailAlignY === 'center'
-                  //   ? 'max-h-[80%] max-w-[80%]'
-                  //   : project.thumbnailAlignY === 'bottom' &&
-                  //       project.thumbnailAlignX === 'center'
-                  //     ? 'max-h-[90%] max-w-[90%]'
-                  //     : 'max-h-full max-w-full'
-                  ' max-h-[85%] max-w-[85%]'
+                  project.thumbnailAlignY === 'center'
+                    ? 'max-h-[80%] max-w-[80%]'
+                    : 'max-h-[85%] max-w-[85%]'
                 } w-auto h-auto object-contain
                 `}
               />
