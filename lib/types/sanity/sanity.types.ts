@@ -12,3 +12,12 @@ export interface Project {
   linkType: string;
   externalUrl?: string;
 }
+
+export type Snapshot = {
+  _id: string;
+  title: string | null;
+  category: string[];
+  mediaType: 'image' | 'video';
+  imageUrl: string | null;
+  videoUrl: string | null;
+}; 

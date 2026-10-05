@@ -20,6 +20,34 @@ export default defineType({
         ],
       },
     }),
-    defineField({ name: 'media', type: 'file' }),
+    defineField({
+      name: 'mediaType',
+      title: 'Media Type',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Image', value: 'image' },
+          { title: 'Video', value: 'video' },
+        ],
+      },
+      initialValue: 'image',
+    }),
+    defineField({
+      name: 'image',
+      type: 'image',
+      hidden: ({ document }) => document?.mediaType !== 'image',
+    }),
+    defineField({
+      name: 'video',
+      type: 'file',
+      options: { accept: 'video/*' },
+      hidden: ({ document }) => document?.mediaType !== 'video',
+    }),
+    defineField({
+      name: 'order',
+      title: 'Display Order',
+      type: 'number',
+      description: 'Lower numbers show first.',
+    }),
   ],
 });

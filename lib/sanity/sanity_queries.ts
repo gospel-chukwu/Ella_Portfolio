@@ -12,7 +12,6 @@ export async function getSiteSettings() {
   return client.fetch(query);
 }
 
-
 export async function getProjects() {
   const query = groq`*[_type == "project"] | order(year desc){
     _id,
@@ -29,5 +28,18 @@ export async function getProjects() {
     externalUrl
   }`;
 
-  return client.fetch(query)
+  return client.fetch(query);
+}
+
+export async function getSnapshots() {
+  const query = groq`*[_type == "snapshot"] | order(order asc){
+    _id,
+    title,
+    category,
+    mediaType,
+    "imageUrl": image.asset->url,
+    "videoUrl": video.asset->url
+  }`;
+
+  return client.fetch(query);
 }
