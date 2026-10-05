@@ -10,7 +10,8 @@ export function Container({
   const widths = {
     default: 'max-w-5xl',
     narrow: 'max-w-3xl', // e.g. the case study body text column
-    wide: 'max-w-[1600px]', // e.g. a page that genuinely needs more room
+    wide: 'max-w-[1150px]', // e.g. a page that genuinely needs more room
+    wider: 'max-w-[1600px]', // e.g. a page that genuinely needs more room
   };
 
   return (
