@@ -5,7 +5,6 @@ import { Snapshot } from '@/lib/types/sanity/sanity.types';
 import { Container } from '@/lib/wrappers/Container';
 
 const Snapshots = ({ snapshots }: { snapshots: Snapshot[] }) => {
-  console.log(snapshots);
   return (
     <Container size="default" className="flex flex-col gap-2 pt-10 pb-20">
       <div className="grid grid-cols-[0.9fr_1.1fr_1fr] gap-2">
