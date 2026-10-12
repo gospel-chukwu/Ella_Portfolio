@@ -1,7 +1,18 @@
 import type { Metadata, Viewport } from 'next';
-import { Stack_Sans_Headline, Inter, DM_Sans, Lato } from 'next/font/google';
+import {
+  Stack_Sans_Headline,
+  Inter,
+  DM_Sans,
+  Lato,
+  Long_Cang,
+} from 'next/font/google';
 import './globals.css';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
 import { Toaster } from 'react-hot-toast';
+import ScrollRestoration from '@/lib/components/ScrollRestoration';
+
+config.autoAddCss = false;
 
 const stackSansHeadline = Stack_Sans_Headline({
   variable: '--font-stack-sans-headline',
@@ -29,6 +40,13 @@ const lato = Lato({
   display: 'swap',
 });
 
+const longCang = Long_Cang({
+  variable: '--font-long-cang',
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -47,9 +65,10 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang="en"
-      className={`${stackSansHeadline.variable} ${inter.variable} ${dmSans.variable} ${lato.variable} h-full antialiased`}
+      className={`${stackSansHeadline.variable} ${inter.variable} ${dmSans.variable} ${lato.variable} ${longCang.variable} h-full antialiased`}
     >
       <body className="min-h-full w-full flex flex-col font-stack-sans-headline">
+        <ScrollRestoration />
         {children}
         <Toaster position="bottom-right" />
       </body>
