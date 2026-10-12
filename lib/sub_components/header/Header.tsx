@@ -6,9 +6,12 @@ import Socials from './Socials';
 import { Container } from '../../wrappers/Container';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [showNavBackground, setShowNavBackground] = useState(false);
+
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,7 +22,9 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="pt-10 sticky top-0 z-1000">
+    <header
+      className={`pt-10 sticky top-0 z-1000 ${pathname === '/about' ? 'bg-[#F5F5F5]' : 'bg-[#FFFFFF]'}`}
+    >
       <Container
         size="default"
         className={`flex justify-between items-center transition-all duration-300 ease-in-out${
