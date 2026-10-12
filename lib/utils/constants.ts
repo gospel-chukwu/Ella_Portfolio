@@ -1,6 +1,7 @@
 import { Tab } from '../types/ui/homepage.type';
 
 export const PAGE_SIZE = 10;
+export const SUBSTACK_URL = 'https://tejof.substack.com';
 
 export const NAVIGATIONS = [
   {
