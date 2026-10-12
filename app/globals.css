@@ -17,6 +17,71 @@
     var(--font-inter), var(--font-dm-sans), var(--font-lato), sans-serif;
   --font-dm-sans: var(--font-dm-sans), var(--font-lato), sans-serif;
   --font-lato: var(--font-lato), sans-serif;
+  --font-long-cang: var(--font-long-cang), cursive;
+}
+
+@theme {
+  --animate-pop-in-out: popInOut 2.5s ease-in-out infinite;
+  --animate-heart-grow: heartGrow 1.6s ease-in infinite;
+  --animate-pop-in-fade-out: popInFadeOut 1.6s ease-in-out infinite;
+
+  @keyframes popInOut {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    20% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    85% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+  }
+
+  @keyframes popInFadeOut {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    20% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    85% {
+      transform: scale(1);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes heartGrow {
+    0% {
+      scale: 1.1;
+    }
+    100% {
+      scale: 6;
+    }
+  }
+}
+
+@theme {
+  --animate-candy-swing: candySwing 2s ease-in-out infinite;
+
+  @keyframes candySwing {
+    0%   { scale: 0.3; rotate: 45deg }
+    10%  { scale: 1;   rotate: 0deg; }
+    90%  { scale: 1;   rotate: 0deg; }
+    100% { scale: 1;   rotate: 0deg; }
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {
