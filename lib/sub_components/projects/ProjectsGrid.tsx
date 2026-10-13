@@ -1,7 +1,7 @@
 'use client';
 
 import ProjectCard from '@/lib/reusable_components/ProjectCard';
-import { ProjectsGridProps } from '@/lib/types/ui/homepage.type';
+import { ProjectsGridProps } from '@/lib/types/ui/homepage.types';
 import { motion } from 'framer-motion';
 import EmptyProject from './EmptyProject';
 
@@ -13,7 +13,7 @@ const ProjectsGrid = ({
   return (
     <div>
       {visible.length === 0 ? (
-        <EmptyProject/>
+        <EmptyProject />
       ) : (
         <>
           <div className="grid grid-cols-[1fr_1fr] gap-x-10 gap-y-15">

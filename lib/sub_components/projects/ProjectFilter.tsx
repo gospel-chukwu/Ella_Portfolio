@@ -1,6 +1,6 @@
 'use client';
 
-import { ProjectsFilterProps } from '@/lib/types/ui/homepage.type';
+import { ProjectsFilterProps } from '@/lib/types/ui/homepage.types';
 import { CATEGORIES } from '@/lib/utils/constants';
 import { motion } from 'framer-motion';
 
