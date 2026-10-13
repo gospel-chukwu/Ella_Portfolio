@@ -4,7 +4,7 @@ import {
   Inter,
   DM_Sans,
   Lato,
-  Long_Cang,
+  Nothing_You_Could_Do,
 } from 'next/font/google';
 import './globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -40,8 +40,8 @@ const lato = Lato({
   display: 'swap',
 });
 
-const longCang = Long_Cang({
-  variable: '--font-long-cang',
+const nothingYouCouldDo = Nothing_You_Could_Do({
+  variable: '--font-nothing-you-could-do',
   weight: '400',
   subsets: ['latin'],
   display: 'swap',
@@ -65,7 +65,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang="en"
-      className={`${stackSansHeadline.variable} ${inter.variable} ${dmSans.variable} ${lato.variable} ${longCang.variable} h-full antialiased`}
+      className={`${stackSansHeadline.variable} ${inter.variable} ${dmSans.variable} ${lato.variable} ${nothingYouCouldDo.variable} h-full antialiased`}
     >
       <body className="min-h-full w-full flex flex-col font-stack-sans-headline">
         <ScrollRestoration />

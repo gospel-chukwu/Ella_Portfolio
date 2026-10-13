@@ -17,7 +17,7 @@
     var(--font-inter), var(--font-dm-sans), var(--font-lato), sans-serif;
   --font-dm-sans: var(--font-dm-sans), var(--font-lato), sans-serif;
   --font-lato: var(--font-lato), sans-serif;
-  --font-long-cang: var(--font-long-cang), cursive;
+  --font-nothing-you-could-do: var(--font-nothing-you-could-do), cursive;
 }
 
 @theme {
