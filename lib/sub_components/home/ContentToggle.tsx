@@ -2,10 +2,9 @@
 
 import { Container } from '@/lib/wrappers/Container';
 import { TABS } from '@/lib/utils/constants';
-import { ContentToggleProps } from '@/lib/types/ui/homepage.type';
+import { ContentToggleProps } from '@/lib/types/ui/homepage.types';
 
-const ContentToggle = ({active, setActive}: ContentToggleProps) => {
-
+const ContentToggle = ({ active, setActive }: ContentToggleProps) => {
   return (
     <Container
       size="default"
