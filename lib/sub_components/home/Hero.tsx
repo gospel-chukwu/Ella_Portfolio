@@ -1,6 +1,6 @@
 'use client';
 
-import { HeroProps } from '@/lib/types/ui/homepage.type';
+import { HeroProps } from '@/lib/types/ui/homepage.types';
 import { Container } from '@/lib/wrappers/Container';
 import ClientLogos from './ClientLogos';
 
@@ -12,7 +12,7 @@ const Hero = ({ clients }: HeroProps) => {
           <span className="text-[#1E1E1E80]">Ella - </span>I Design Brands,
           Products and Experiences that are Exceptional and cannot be ignored.
         </div>
-        <div className='flex items-center gap-3'>
+        <div className="flex items-center gap-3">
           <h2 className="text-[#626262] font-light text-[0.95rem] tracking-[2%] leading-[23px]">
             Clients:
           </h2>
