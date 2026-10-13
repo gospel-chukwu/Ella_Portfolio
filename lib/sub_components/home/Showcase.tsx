@@ -4,7 +4,7 @@ import { useState } from 'react';
 import ContentToggle from './ContentToggle';
 import Projects from './Projects';
 import Snapshots from './Snapshots';
-import { Tab } from '@/lib/types/ui/homepage.type';
+import { Tab } from '@/lib/types/ui/homepage.types';
 import { Project, Snapshot } from '@/lib/types/sanity/sanity.types';
 
 const Showcase = ({
