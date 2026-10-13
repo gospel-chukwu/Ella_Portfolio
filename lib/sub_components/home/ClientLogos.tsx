@@ -1,5 +1,5 @@
 'use client';
-import { ClientLogosProps } from '@/lib/types/ui/homepage.type';
+import { ClientLogosProps } from '@/lib/types/ui/homepage.types';
 import { motion } from 'framer-motion';
 
 const LOGO_SIZE = 28; // w-7 = 28px
