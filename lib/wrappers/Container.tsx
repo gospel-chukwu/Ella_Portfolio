@@ -4,7 +4,7 @@ export function Container({
   className = '',
 }: {
   children: React.ReactNode;
-  size?: 'default' | 'narrow' | 'wide';
+  size?: 'default' | 'narrow' | 'wide' | 'wider';
   className?: string;
 }) {
   const widths = {
