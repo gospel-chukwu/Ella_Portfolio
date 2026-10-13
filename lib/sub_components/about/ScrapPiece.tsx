@@ -99,7 +99,7 @@ const ScrapPiece = ({
         onAnimationComplete={settle}
       >
         {isNote ? (
-          <p className="font-nothing-you-could-do text-[0.8cqw] font-medium leading-tight text-neutral-800">
+          <p className="font-nothing-you-could-do text-[0.85cqw] font-medium leading-tight text-neutral-800">
             {p.text}
           </p>
         ) : (
