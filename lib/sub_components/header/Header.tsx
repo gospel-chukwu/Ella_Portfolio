@@ -23,11 +23,17 @@ const Header = () => {
 
   return (
     <header
-      className={`pt-10 sticky top-0 z-1000 ${pathname === '/about' ? 'bg-[#F5F5F5]' : 'bg-[#FFFFFF]'}`}
+      className={`pt-10 sticky top-0 z-1000 transition-colors duration-300 ease-in-out pointer-events-none ${
+        showNavBackground
+          ? 'bg-transparent'
+          : pathname === '/about'
+            ? 'bg-[#F5F5F5]'
+            : 'bg-[#FFFFFF]'
+      }`}
     >
       <Container
         size="default"
-        className={`flex justify-between items-center transition-all duration-300 ease-in-out${
+        className={`flex justify-between items-center transition-all duration-300 ease-in-out pointer-events-auto ${
           showNavBackground
             ? `bg-white/30 backdrop-blur-lg shadow-md rounded-2xl py-5`
             : ''
