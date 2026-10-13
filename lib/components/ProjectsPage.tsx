@@ -5,7 +5,7 @@ import ProjectFilter from '../sub_components/projects/ProjectFilter';
 import ProjectsGrid from '../sub_components/projects/ProjectsGrid';
 import { Container } from '../wrappers/Container';
 import { PAGE_SIZE } from '../utils/constants';
-import { ProjectsPageProps } from '../types/ui/homepage.type';
+import { ProjectsPageProps } from '../types/ui/homepage.types';
 
 const ProjectsPage = ({ projects }: ProjectsPageProps) => {
   const [activeCategory, setActiveCategory] = useState<string | 'all'>('all');
