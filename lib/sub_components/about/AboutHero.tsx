@@ -35,7 +35,7 @@ const AboutHero = () => {
           <span> I Enjoy </span>
           <span>Playing </span>
           <span className="inline-flex items-center gap-2.5">
-            <span className="text-[#1E1E1E80] cursor-pointer hover:text-[#DB0158] transition-all duration-300 ease-in-out">
+            <span className="text-[#1E1E1E80] cursor-pointer hover:text-[#DB0158] transition-all duration-300 ease-in-out whitespace-nowrap">
               Candy Crush{' '}
             </span>
             <div className="inline-block w-[12%] h-[12%] origin-bottom-left animate-candy-swing">
