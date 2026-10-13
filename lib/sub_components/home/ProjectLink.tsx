@@ -1,8 +1,8 @@
 'use client';
 
-import { ProjectLinkProps } from "@/lib/types/ui/homepage.type";
-import Image from "next/image";
-import Link from "next/link";
+import { ProjectLinkProps } from '@/lib/types/ui/homepage.types';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const ProjectLink = ({ url, linkTarget = '_self', text }: ProjectLinkProps) => (
   <Link
