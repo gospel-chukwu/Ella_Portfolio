@@ -105,7 +105,7 @@ const ScrapPiece = ({
         ) : (
           <Image
             src={p.src!}
-            alt=""
+            alt={p.text || ''}
             width={800}
             height={800}
             className="h-auto w-full"
