@@ -14,14 +14,14 @@ const Socials = () => {
             key={i}
             target="_blank"
             aria-label="Social media link"
-            className="relative group block w-5 lg:w-[1.35rem]"
+            className="relative group block"
           >
             <Image
               src={social.image}
               alt=""
               width={100}
               height={100}
-              className="w-full h-auto hover:opacity-60 transition-opacity duration-300 ease-in-out"
+              className="w-[85%] h-auto hover:opacity-60 transition-opacity duration-300 ease-in-out"
             />
             <div className="w-0 group-hover:w-[60%] h-1 bg-black absolute -top-2 rounded-full transition-[width] duration-300 ease-in-out"></div>
           </Link>
