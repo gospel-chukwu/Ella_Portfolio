@@ -63,6 +63,7 @@ export default defineType({
       },
     }),
     defineField({ name: 'year', type: 'number' }),
+    defineField({ name: 'month', type: 'string' }),
     defineField({ name: 'shortDescription', type: 'text', rows: 3 }),
     defineField({
       name: 'linkType',
@@ -79,15 +80,33 @@ export default defineType({
       type: 'array',
       of: [
         { type: 'block' },
-        { type: 'image' },
-        {
-          type: 'file',
-          name: 'video',
-          title: 'Video',
-          options: { accept: 'video/*' },
-        },
+        { type: 'figure' },
         { type: 'sectionMarker' },
+        { type: 'carousel' },
       ],
+      description:
+        'Stack blocks to build the case study. Insert a Section block to start each new sidebar section.',
+      hidden: ({ document }) => document?.linkType !== 'caseStudy',
+    }),
+    defineField({
+      name: 'visitLink',
+      title: 'Visit link (optional)',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'label',
+          type: 'string',
+          description: 'e.g. Visit Runwae on Wallet',
+        }),
+        defineField({ name: 'url', type: 'url' }),
+      ],
+      hidden: ({ document }) => document?.linkType !== 'caseStudy',
+    }),
+    defineField({
+      name: 'acknowledgement',
+      title: 'Acknowledgement (optional)',
+      type: 'text',
+      rows: 3,
       hidden: ({ document }) => document?.linkType !== 'caseStudy',
     }),
   ],
