@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { Snapshot } from '../types/sanity/sanity.types';
+import { useVisiblePlayback } from '../hooks/useVisiblePlayback';
 
 const SnapshotCard = ({
   snapshot,
@@ -10,12 +11,14 @@ const SnapshotCard = ({
   snapshot: Snapshot;
   className?: string;
 }) => {
+  const videoRef = useVisiblePlayback();
+
   return (
     <div className={`relative overflow-hidden group ${className}`}>
       {snapshot.mediaType === 'video' ? (
         <video
           src={snapshot.videoUrl || ''}
-          autoPlay
+          ref={videoRef}
           muted
           loop
           playsInline
