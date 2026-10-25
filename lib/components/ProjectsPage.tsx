@@ -37,16 +37,16 @@ const ProjectsPage = ({ projects }: ProjectsPageProps) => {
   return (
     <Container
       size="wide"
-      className="grid grid-cols-[0.25fr_1.75fr] gap-8 py-22"
+      className="flex flex-col pt-12 pb-22 lg:grid lg:grid-cols-[0.25fr_1.75fr] gap-8 lg:py-22"
     >
-      <div className="sticky top-[100px] self-start relative">
+      <div className="relative z-20 lg:sticky lg:top-[100px] lg:self-start lg:z-auto">
         <ProjectFilter
           projects={projects}
           active={activeCategory}
           handleFilterChange={handleFilterChange}
         />
       </div>
-      <div ref={gridRef} className="scroll-mt-[150px]">
+      <div ref={gridRef} className="scroll-mt-[120px] lg:scroll-mt-[150px]">
         <ProjectsGrid
           visible={visibleProjects}
           hasMore={hasMore}
