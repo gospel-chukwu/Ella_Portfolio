@@ -114,8 +114,11 @@
   animation: marquee-slide var(--marquee-duration, 40s) linear infinite;
 }
 
-.marquee:hover .marquee-track {
-  animation-play-state: paused;
+/* Pause on hover — desktop/pointer devices only; touch screens run uninterrupted */
+@media (hover: hover) {
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
 }
 
 /* people who prefer less motion get a normal scrollable row instead */
