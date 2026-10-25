@@ -9,7 +9,7 @@ const ContactForm = () => {
     useContactForm();
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-12 lg:gap-10">
       <div className="flex flex-col gap-5">
         <input
           type="email"
@@ -33,7 +33,7 @@ const ContactForm = () => {
         />
       </div>
       <motion.button
-        className="cursor-pointer flex items-center justify-center gap-1.5 w-[60%] bg-gradient-to-b from-[#555555] to-[#000000] py-3 rounded-full"
+        className="cursor-pointer flex items-center justify-center gap-1.5 w-full lg:w-[60%] bg-gradient-to-b from-[#555555] to-[#000000] py-5 lg:py-3 rounded-full"
         whileHover={{ filter: 'brightness(1.15)' }}
         whileTap={{ scale: 0.95, filter: 'brightness(1.5)' }}
         transition={{

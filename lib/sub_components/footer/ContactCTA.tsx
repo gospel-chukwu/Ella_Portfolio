@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const ContactCTA = () => {
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-10 lg:gap-20">
       <div className="flex flex-col gap-2">
         <h1 className="font-light tracking-[2%] leading-[40px] text-[1.7rem] w-[85%]">
           Looking for thoughtful design that moves people and grows businesses?
