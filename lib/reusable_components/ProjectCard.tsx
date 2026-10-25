@@ -23,7 +23,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
     <div className="flex flex-col gap-5">
       <div className="flex flex-col gap-5">
         <div
-          className={`relative w-full h-[26rem] overflow-hidden flex items-center justify-center bg-[#F5F5F5]`}
+          className={`relative w-full h-[26rem] overflow-hidden flex items-center justify-center bg-[#F5F5F5] rounded-lg`}
         >
           {isContain ? (
             <div className={`relative w-full h-full flex ${alignY} ${alignX}`}>

@@ -4,6 +4,7 @@ import ProjectCard from '@/lib/reusable_components/ProjectCard';
 import { ProjectsGridProps } from '@/lib/types/ui/homepage.types';
 import { motion } from 'framer-motion';
 import EmptyProject from './EmptyProject';
+import { Fragment } from 'react/jsx-runtime';
 
 const ProjectsGrid = ({
   visible,
@@ -16,9 +17,11 @@ const ProjectsGrid = ({
         <EmptyProject />
       ) : (
         <>
-          <div className="grid grid-cols-[1fr_1fr] gap-x-10 gap-y-15">
+          <div className="flex flex-col md:grid grid-cols-[1fr_1fr] gap-x-10 gap-y-15">
             {visible.map(project => (
-              <ProjectCard key={project._id} project={project} />
+              <Fragment key={project._id}>
+                <ProjectCard project={project} />
+              </Fragment>
             ))}
           </div>
           {hasMore && (
