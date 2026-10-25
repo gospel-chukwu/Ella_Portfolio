@@ -6,8 +6,8 @@ const Substack = async () => {
   const posts = await getSubstackPosts();
 
   return (
-    <section className="py-20">
-      <Container size="default" className="flex flex-col gap-15">
+    <section className="pt-15 pb-20 md:py-20">
+      <Container size="default" className="flex flex-col gap-10 md:gap-15">
         <h2 className="text-[#181818] text-[1.3rem] tracking-[1%] leading-[20px] font-light">
           My Substack
         </h2>
