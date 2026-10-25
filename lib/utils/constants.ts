@@ -20,14 +20,14 @@ export const NAVIGATIONS = [
   },
   {
     title: 'Playground',
-    link: 'https://open.spotify.com/',
+    link: 'https://open.spotify.com/playlist/0LZdnmD7fvMBin0qNuPBMV?si=49ba6f5c87b04dce&nd=1&dlsi=e4510c5b10a34771',
     image: '/icons/spotify.svg',
   },
 ];
 export const SOCIALS = [
   {
     image: '/icons/behance.svg',
-    link: 'https://www.behance.net/',
+    link: 'https://www.behance.net/thellajames',
   },
   {
     image: '/icons/x.svg',
@@ -35,11 +35,11 @@ export const SOCIALS = [
   },
   {
     image: '/icons/linkedin.svg',
-    link: 'https://www.linkedin.com/',
+    link: 'https://www.linkedin.com/in/ella-james-163b87229',
   },
   {
     image: '/icons/substack.svg',
-    link: 'https://substack.com/ ',
+    link: 'https://substack.com/@tejof',
   },
 ];
 
