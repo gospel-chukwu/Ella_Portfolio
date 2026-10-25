@@ -9,8 +9,8 @@ const Projects = ({ projects }: { projects: Project[] }) => {
   const router = useRouter();
 
   return (
-    <Container size="default" className="flex flex-col gap-10 py-20 px-10">
-      <div className="grid grid-cols-[1fr_1fr] gap-x-10 gap-y-15">
+    <Container size="default" className="flex flex-col gap-10 pt-10 pb-20 md:py-20 md:px-10">
+      <div className="flex flex-col md:grid grid-cols-[1fr_1fr] gap-x-10 gap-y-15">
         {projects.slice(0, 10).map(project => (
           <ProjectCard key={project._id} project={project} />
         ))}
