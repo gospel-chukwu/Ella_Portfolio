@@ -5,6 +5,7 @@ import {
   DM_Sans,
   Lato,
   Nothing_You_Could_Do,
+  Geist_Mono,
 } from 'next/font/google';
 import './globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -47,6 +48,12 @@ const nothingYouCouldDo = Nothing_You_Could_Do({
   display: 'swap',
 });
 
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -65,7 +72,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang="en"
-      className={`${stackSansHeadline.variable} ${inter.variable} ${dmSans.variable} ${lato.variable} ${nothingYouCouldDo.variable} h-full antialiased`}
+      className={`${stackSansHeadline.variable} ${inter.variable} ${dmSans.variable} ${lato.variable} ${nothingYouCouldDo.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full w-full flex flex-col font-stack-sans-headline">
         <ScrollRestoration />
