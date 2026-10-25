@@ -10,7 +10,7 @@ const SubstackCard = ({ post }: { post: SubstackPost }) => {
       rel="noopener noreferrer"
       className="bg-[#FAFAFA] px-4 py-5 flex gap-5 items-center w-full rounded-[24px] hover:bg-gray-200 transition-colors duration-300 ease-in-out" 
     >
-      <div className="bg-gray-300 w-36 h-23 shrink-0 rounded-[20px] overflow-hidden flex justify-center items-center">
+      <div className="bg-gray-300 w-32 md:w-36 h-23 shrink-0 rounded-[20px] overflow-hidden flex justify-center items-center">
         <Image
           src={post.image || ''}
           alt={post.title}
