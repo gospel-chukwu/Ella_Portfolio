@@ -43,12 +43,8 @@ const Header = () => {
   return (
     <>
       <header
-        className={`mx-4 lg:mx-0 pt-6 md:pt-10 sticky top-0 z-[1000] transition-colors duration-300 ease-in-out pointer-events-none ${
-          showNavBackground
-            ? 'bg-transparent'
-            : pathname === '/about'
-              ? 'bg-[#F5F5F5]'
-              : 'bg-[#FFFFFF]'
+        className={`px-4 lg:px-0 pt-6 md:pt-10 sticky top-0 z-[1000] transition-colors duration-300 ease-in-out pointer-events-none ${
+          showNavBackground ? 'bg-transparent' : ''
         }`}
       >
         <Container
@@ -60,10 +56,7 @@ const Header = () => {
           }`}
         >
           {/* Logo */}
-          <Link
-            href="/"
-            className="block w-10 shrink-0 w-13 lg:w-[6.7%] -ml-2"
-          >
+          <Link href="/" className="block w-10 shrink-0 w-13 lg:w-[6.7%] -ml-2">
             <Image
               src="/logo.svg"
               width={100}
