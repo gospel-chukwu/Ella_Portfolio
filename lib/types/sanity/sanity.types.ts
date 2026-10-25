@@ -20,4 +20,4 @@ export type Snapshot = {
   mediaType: 'image' | 'video';
   imageUrl: string | null;
   videoUrl: string | null;
-}; 
+};
