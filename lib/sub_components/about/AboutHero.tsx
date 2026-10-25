@@ -7,9 +7,9 @@ import MusicPlayerCard from './MusicPlayerCard';
 
 const AboutHero = () => {
   return (
-    <section className="pt-30">
+    <section className="pt-10 md:pt-30">
       <Container size="default" className="flex flex-col gap-2">
-        <div className="w-[78%] font-normal tracking-[2%] leading-[46px] text-[1.97rem] text-[#1E1E1E]">
+        <div className="w-full md:w-[78%] font-normal tracking-[2%] leading-[46px] text-[1.97rem] text-[#1E1E1E]">
           <span>Ella </span>
           <span className="group relative inline-block">
             <span className="cursor-pointer">(me)</span>
