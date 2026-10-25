@@ -5,6 +5,7 @@ import { Snapshot } from '@/lib/types/sanity/sanity.types';
 import { Container } from '@/lib/wrappers/Container';
 
 const Snapshots = ({ snapshots }: { snapshots: Snapshot[] }) => {
+
   return (
     <Container
       size="default"
