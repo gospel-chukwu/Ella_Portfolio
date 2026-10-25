@@ -12,6 +12,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import { Toaster } from 'react-hot-toast';
 import ScrollRestoration from '@/lib/components/ScrollRestoration';
+import BackgroundColorWrapper from '@/lib/wrappers/BackgroundColorWrapper';
 
 config.autoAddCss = false;
 
@@ -76,7 +77,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
     >
       <body className="min-h-full w-full flex flex-col font-stack-sans-headline">
         <ScrollRestoration />
-        {children}
+        <BackgroundColorWrapper>{children}</BackgroundColorWrapper>
         <Toaster position="bottom-right" />
       </body>
     </html>
