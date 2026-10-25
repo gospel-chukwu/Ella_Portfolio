@@ -64,6 +64,18 @@ export const OFFSETS = {
   right: { x: 60 },
 };
 
+export const ATTACH = {
+  none: 'p-6 md:p-10',
+  bottom: 'px-6 pt-6 md:px-10 md:pt-10',
+  top: 'px-6 pb-6 md:px-10 md:pb-10',
+  left: 'py-6 pr-6 md:py-10 md:pr-10',
+  right: 'py-6 pl-6 md:py-10 md:pl-10',
+  'bottom-right': 'pl-6 pt-6 md:pl-10 md:pt-10',
+  'bottom-left': 'pr-6 pt-6 md:pr-10 md:pt-10',
+  'top-right': 'pb-6 pl-6 md:pb-10 md:pl-10',
+  'top-left': 'pb-6 pr-6 md:pb-10 md:pr-10',
+} as const;
+
 // photos land first, then stickers, then notes
 export const KIND_ORDER = { photo: 0, sticker: 1, note: 2 } as const;
 export const STEP = 0.06; // seconds between pieces
