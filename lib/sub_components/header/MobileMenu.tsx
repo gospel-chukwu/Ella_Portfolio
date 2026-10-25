@@ -121,14 +121,14 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                     rel="noopener noreferrer"
                     onClick={onClose}
                     aria-label={label}
-                    className="block w-5 opacity-60 transition-opacity duration-200 hover:opacity-100"
+                    className="block opacity-60 transition-opacity duration-200 hover:opacity-100"
                   >
                     <Image
                       src={social.image}
                       alt="social handle"
                       width={20}
                       height={20}
-                      className="h-auto w-full"
+                      className="h-auto w-[90%]"
                     />
                   </Link>
                 );
