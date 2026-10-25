@@ -23,7 +23,7 @@ const Scrapbook = () => {
   return (
     <Container
       size="wide"
-      className="relative mx-auto aspect-[16/9] w-full max-w-6xl mt-30"
+      className="relative mx-auto aspect-[16/9] w-full max-w-6xl mt-15 md:mt-30 "
     >
       <div ref={boardRef} className="absolute inset-0">
         {PIECES.map((p, i) => (
