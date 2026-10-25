@@ -18,6 +18,7 @@
   --font-dm-sans: var(--font-dm-sans), var(--font-lato), sans-serif;
   --font-lato: var(--font-lato), sans-serif;
   --font-nothing-you-could-do: var(--font-nothing-you-could-do), cursive;
+  --font-geist-mono: var(--font-geist-mono), cursive;
 }
 
 @theme {
@@ -77,10 +78,62 @@
   --animate-candy-swing: candySwing 2s ease-in-out infinite;
 
   @keyframes candySwing {
-    0%   { scale: 0.3; rotate: 45deg }
-    10%  { scale: 1;   rotate: 0deg; }
-    90%  { scale: 1;   rotate: 0deg; }
-    100% { scale: 1;   rotate: 0deg; }
+    0% {
+      scale: 0.3;
+      rotate: 45deg;
+    }
+    10% {
+      scale: 1;
+      rotate: 0deg;
+    }
+    90% {
+      scale: 1;
+      rotate: 0deg;
+    }
+    100% {
+      scale: 1;
+      rotate: 0deg;
+    }
+  }
+}
+
+@keyframes marquee-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  overflow: hidden;
+}
+
+.marquee-track {
+  animation: marquee-slide var(--marquee-duration, 40s) linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* people who prefer less motion get a normal scrollable row instead */
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+  }
+  .marquee-track {
+    animation: none;
+  }
+  .marquee-dup {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }
 
