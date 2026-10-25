@@ -3,11 +3,15 @@
 import Image from 'next/image';
 import { Snapshot } from '../types/sanity/sanity.types';
 
-const SnapshotCard = ({ snapshot, className }: { snapshot: Snapshot, className?: string }) => {
+const SnapshotCard = ({
+  snapshot,
+  className,
+}: {
+  snapshot: Snapshot;
+  className?: string;
+}) => {
   return (
-    <div
-      className={`relative overflow-hidden group ${className}`}
-    >
+    <div className={`relative overflow-hidden group ${className}`}>
       {snapshot.mediaType === 'video' ? (
         <video
           src={snapshot.videoUrl || ''}
