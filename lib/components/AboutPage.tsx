@@ -4,7 +4,7 @@ import Substack from '../sub_components/about/Substack';
 
 const AboutPage = () => {
   return (
-    <div className="bg-[#F5F5F5]">
+    <div className="bg-[#F5F5F5] overflow-hidden">
       <AboutHero />
       <Scrapbook />
       <Substack />
