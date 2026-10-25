@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex gap-14">
+    <nav className="flex gap-6 lg:gap-14" aria-label="Main navigation">
       {NAVIGATIONS.map((navigation, i) => {
         const active = isActive(navigation.link);
 
@@ -30,7 +30,7 @@ const Navbar = () => {
             href={navigation.link}
             target={navigation.link.includes('spotify') ? '_blank' : '_self'}
             className={`flex items-center gap-2 text-[0.85rem] leading-[100%] tracking-[1%]
-               font-light text-[#000000] transition-all duration-300 ease-in-out ${
+               font-light text-[#000000] whitespace-nowrap transition-all duration-300 ease-in-out ${
                  active ? 'opacity-100' : 'opacity-50 hover:opacity-80'
                }`}
           >
