@@ -8,7 +8,7 @@ const ContentToggle = ({ active, setActive }: ContentToggleProps) => {
   return (
     <Container
       size="default"
-      className="flex items-center justify-center pt-11"
+      className="flex items-center justify-center pt-15 md:pt-11"
     >
       {/* Track */}
       <div className="relative flex items-center gap-2 bg-[#F5F5F5] px-2 py-2 rounded-full overflow-hidden">
